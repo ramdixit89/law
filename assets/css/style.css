@@ -1,0 +1,490 @@
+/* General Flexbox Styling */
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 16px;
+    background-color: white;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-size: 1em;
+    font-style: italic;
+    margin: 0;
+}
+
+.brand-subtitle {
+    font-size: 12px; /* Same as text-xs */
+    margin: 0;
+}
+
+.divider {
+    width: 2px;
+    height: 50px;
+    background-color: orange;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container i {
+    font-size: 20px;
+    color: white;
+}
+
+.consultation-text {
+    color: orange;
+    font-size: 12px; /* Same as text-xs */
+    margin: 0;
+}
+
+.phone-number {
+    font-size: 12px; /* Same as text-xs */
+    margin: 0;
+}
+
+.free-consultation {
+    background-color: orange;
+    border-radius: 5%;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 10px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand, .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divider {
+        height: 20px;
+    }
+}
+/* Navbar */
+/* Navigation Bar Styling */
+.nav-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    padding: 10px 64px;
+    font-size: 12px; /* Equivalent to text-xs */
+    color: white;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white; /* Default text color */
+    font-weight: bold;
+    padding: 10px;
+}
+
+.nav-link.home-link {
+    color: orange; /* Special color for the HOME link */
+}
+
+/* Hover effect */
+.nav-link:hover {
+    color: orange;
+    transition: color 0.3s;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+/* Banner Container */
+.banner-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Image Styling */
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Styling */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text Styling */
+.banner-text {
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: white;
+    text-align: center;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+}
+
+/* Highlighted Text Styling */
+.highlight-text {
+    color: orange;
+}
+
+/* Responsive Font Size for Smaller Screens */
+@media (max-width: 768px) {
+    .banner-text {
+        font-size: 1.5em;
+    }
+}
+/* Container styling */
+.content-container {
+    height: 50vh;
+    width: 100%;
+    padding-bottom: 3%;
+}
+
+/* Grid layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 8%;
+    text-align: center;
+}
+
+/* Individual content item styling */
+.content-item {
+    background-color: white;
+    padding: 2%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+/* Icon styling */
+.icon {
+    font-size: 3em;
+    color: orange;
+    margin-bottom: 0.5rem;
+}
+
+/* Title styling */
+.content-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: orange;
+}
+
+/* Text styling */
+.content-text {
+    margin-top: 0.5rem;
+    color: #6B7280; /* Tailwind's gray-600 equivalent */
+}
+
+/* Arrow icon styling */
+.icon-arrow {
+    font-size: 1.25rem;
+    color: orange;
+    margin-top: 1rem;
+    padding-bottom: 3%;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2%;
+    }
+
+    .content-item {
+        padding-bottom: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-item {
+        padding-bottom: 5%;
+    }
+}
+/* Container and Title styling */
+.bg-container {
+    background-color: white;
+    height: auto;
+    width: 100%;
+    padding-bottom: 3%;
+    background-image: url('https://www.srllp.com/wp-content/themes/tseg-staubus/img/new_gradient-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 100%;
+}
+
+.practice-title {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 800;
+    padding-bottom: 10%;
+}
+
+/* Grid layout */
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+.practice-item {
+    background-color: white;
+    padding: 2%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    font-size: 3em;
+    margin-bottom: 0.5rem;
+    color: orange;
+}
+
+/* Special styling for orange item */
+.bg-orange {
+    background-color: orange;
+}
+
+.text-white {
+    color: white;
+}
+
+.icon-white {
+    font-size: 3em;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.practice-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.practice-name-white {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Button styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.view-all-button {
+    color: white;
+    background-color: orange;
+    padding: 0.5%;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .practice-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .practice-grid {
+        grid-template-columns: 1fr;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+/* Flex container styling */
+.content-flex {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 8%;
+    padding-right: 20%;
+    padding-left: 20%;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .content-flex {
+        padding-right: 10%;
+        padding-left: 10%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-flex {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+/* Testimonials section container */
+.testimonials-container {
+    background-color: white;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-size: 0.75rem;
+}
+
+/* Testimonials content box */
+.testimonials-content {
+    padding-left: 9rem;
+    padding-right: 9rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-width: 4px;
+}
+
+/* Testimonials heading */
+.testimonial-heading {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Flex container for the testimonial text and icons */
+.testimonial-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+/* Testimonial text */
+.testimonial-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    position: relative;
+}
+
+/* Testimonial quote with decorative quotes */
+.testimonial-quote {
+    color: #4b5563; /* Gray-600 */
+    position: relative;
+}
+
+.testimonial-quote::before {
+    content: '“';
+    position: absolute;
+    left: -1.5rem;
+    color: #4b5563;
+}
+
+.testimonial-quote::after {
+    content: '”';
+    position: absolute;
+    right: -1.5rem;
+    color: #4b5563;
+}
+
+/* Button container */
+.testimonial-button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+
+/* Button styling */
+.testimonial-button {
+    color: white;
+    background-color: orange;
+    padding: 0.5rem 1rem;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .testimonials-content {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .testimonial-quote::before, .testimonial-quote::after {
+        left: -1rem;
+        right: -1rem;
+    }
+}
